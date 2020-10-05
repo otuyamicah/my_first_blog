@@ -16,12 +16,14 @@ li{
     padding: 10px;
 }
 
-h1{color: red;}
-p{color: black;}
+h1{color: red;
+text-decoration: underline;}
+p{color: black;
+font-family: 'Courier New', Courier, monospace;}
 
 main{
     color:black;
-    height: 87vh;
+    height: auto;
     text-align: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
     letter-spacing: normal;
@@ -36,19 +38,20 @@ a{
     font-size: 20px;
 }
 
-.footer a{
+.footer > a{
     text-decoration: none;
     font-size: medium;
     font-family:  sans-serif;
     letter-spacing: 4px;
     font-size: 15px;
+
 }
 
 ul{
     display: flex;
     justify-content: center;
     background-color: rgb(36, 36, 36);
-    position: fixed;
+    position: relative;
     width: 100%;
 }
 
@@ -66,8 +69,6 @@ li a:hover{
 }
 
 .card {
-    display: flex;
-    flex-flow: wrap;
     justify-content: space-between;
     box-shadow: 0 5px 15px black;
     transition: 0.4s;
@@ -114,13 +115,23 @@ h3{
     color: seagreen;
 }
 
-@media screen and (max-width:999px) {
-    .wrap{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+/* for mobile */
+@media screen and (max-width:620px) {
+    .wrap {
         width: 100%;
-        margin: auto; 
-        margin-top: 100%;
+        justify-content: center;
+    }
+    ul {
+        display: inline-block;
+        
+    }
+
+}
+
+/* for tablet */
+@media screen and (max-width:768px) {
+    .wrap {
+        width: 100%;
+        justify-content: center;
     }
 }
